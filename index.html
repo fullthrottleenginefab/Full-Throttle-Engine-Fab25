@@ -13,10 +13,10 @@
   <!-- Navigation -->
 <div class="menu-container">
   <button class="menu-btn">&#9776; Menu</button>
-  <div class="dropdown-content">
-    <a href="#apparel">Apparel</a>
-    <a href="#work">Past Work</a>
-  </div>
+  <div class="nav-links">
+  <a href="#apparel">Apparel</a>
+  <a href="#work">Past Work</a>
+</div>
 
   <!-- Main Content -->
   <main class="container">
@@ -85,5 +85,14 @@
     <span style="font-size: 18px; margin-left: 8px;">Instagram</span>
   </a>
 </footer>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
