@@ -104,3 +104,41 @@ footer {
   background-color: #b30000;  /* red highlight on hover */
   color: white;
 }
+/* Make navbar stick to the top */
+.navbar {
+  position: fixed;   /* Keeps navbar stuck at top */
+  top: 0;
+  left: 0;
+  width: 100%;       /* Full width */
+  background: #333;  /* Dark background
+  padding: 10px 0;
+  z-index: 1000;     /* Stays above other content */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #f4f4f4;  /* Lighter on hover */
+}
+
+/* Push content down so navbar doesn't cover it */
+body {
+  padding-top: 60px; /* Adjust if your navbar is taller */
+}
