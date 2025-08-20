@@ -69,3 +69,38 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/* --- Fix logo size --- */
+.logo img {
+  max-width: 250px;   /* adjust this number if needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- Fix dropdown menu button --- */
+.dropdown button {
+  background-color: #b30000;  /* dark red */
+  color: white;               /* white text */
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* --- Fix dropdown background --- */
+.dropdown-content {
+  background-color: #222;   /* dark gray background */
+  border: 1px solid #444;   /* subtle border */
+}
+
+/* --- Dropdown links style --- */
+.dropdown-content a {
+  color: white;             /* white text */
+  background: none;         /* remove ugly blocks */
+}
+
+.dropdown-content a:hover {
+  background-color: #b30000;  /* red highlight on hover */
+  color: white;
+}
