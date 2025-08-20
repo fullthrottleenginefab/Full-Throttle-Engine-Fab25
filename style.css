@@ -76,66 +76,49 @@ footer {
   display: block;
   margin: 0 auto;
 }
+/* === Hamburger Menu === */
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
 
-/* --- Fix dropdown menu button --- */
-.dropdown button {
-  background-color: #b30000;  /* dark red */
-  color: white;               /* white text */
-  padding: 10px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
+.menu-btn {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
 }
 
-/* --- Fix dropdown background --- */
-.dropdown-content {
-  background-color: #222;   /* dark gray background */
-  border: 1px solid #444;   /* subtle border */
+.menu-btn span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+/* Show hamburger menu on smaller screens */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none; /* hide normal menu 
+    flex-direction: column;
+    position: absolute;
+    top: 50px;  /* adjust to match header height */
+    right: 0;
+    background: #333; /* your background color */
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex; /* show menu when toggled */
+  }
 }
 
-/* --- Dropdown links style --- */
-.dropdown-content a {
-  color: white;             /* white text */
-  background: none;         /* remove ugly blocks */
-}
 
-.dropdown-content a:hover {
-  background-color: #b30000;  /* red highlight on hover */
-  color: white;
-}
-/* Make navbar stick to the top */
-.navbar {
-  position: fixed;   /* Keeps navbar stuck at top */
-  top: 0;
-  left: 0;
-  width: 100%;       /* Full width */
-  background: #333;  /* Dark background
-  padding: 10px 0;
-  z-index: 1000;     /* Stays above other content */
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar li {
-  margin: 0 15px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.navbar a:hover {
-  color: #f4f4f4;  /* Lighter on hover */
+  
 }
 
 /* Push content down so navbar doesn't cover it */
