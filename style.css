@@ -95,6 +95,17 @@ footer {
   margin: 4px 0;
   transition: 0.4s;
 }
+/* Default nav for desktop */
+.nav-links {
+  display: flex;          /* always visible on desktop */
+  flex-direction: row;    /* side by side */
+  gap: 20px;              /* space between links */
+  justify-content: center;
+}
+
+.menu-btn {
+  display: none;          /* hide hamburger on desktop */
+}
 /* Show hamburger menu on smaller screens */
 @media (max-width: 768px) {
   .menu-btn {
