@@ -146,3 +146,40 @@ footer {
 body {
   padding-top: 60px; /* Adjust if your navbar is taller */
 }
+/* === Responsive Navigation Fix === */
+
+/* Hide nav links on mobile */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Show when active */
+.nav-links.active {
+  display: flex;
+}
+
+/* Show hamburger button on mobile */
+.menu-btn {
+  display: block;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Desktop rules */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;        /* always visible on desktop */
+    flex-direction: row;  /* side by side */
+    gap: 20px;            /* space between links */
+    justify-content: center;
+  }
+
+  .menu-btn {
+    display: none;        /* hide hamburger on desktop */
+  }
+}
