@@ -106,26 +106,35 @@ footer {
 .menu-btn {
   display: none;          /* hide hamburger on desktop */
 }
+/* Default desktop navbar */
+}
 /* Show hamburger menu on smaller screens */
 @media (max-width: 768px) {
   .menu-btn {
-    display: flex;
+    display: flex; /* show hamburger button */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
   }
 
   .nav-links {
-    display: none; /* hide normal menu 
+    display: none;
     flex-direction: column;
+    gap: 10px;
     position: absolute;
-    top: 50px;  /* adjust to match header height */
+    top: 50px;  /* adjust if navbar taller */
     right: 0;
-    background: #333; /* your background color */
+    background: #333;
     width: 200px;
     padding: 10px;
   }
 
   .nav-links.active {
-    display: flex; /* show menu when toggled */
+    display: flex; /* show when toggled */
   }
+}
 }
 
 
